@@ -3,6 +3,8 @@
 var React = require('react'),
     FeedItem = require('./FeedItem');
 
+var EarthquakeItem = require('./EarthquakeItem');
+
 var FeedList = React.createClass({
 
   render: function() {
@@ -13,7 +15,7 @@ var FeedList = React.createClass({
 
     return (
       <ul className="list-group container">
-        {feedItems}
+        <EarthquakeItem />
       </ul>
     );
   }
