@@ -2,7 +2,7 @@
 var React = require('react'),
     Feed = require('./components/Feed');
 
-React.renderComponent(
+React.render(
   <Feed />,
   document.getElementById('app')
 );
