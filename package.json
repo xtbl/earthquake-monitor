@@ -1,13 +1,13 @@
 {
   "name": "earthquake-monitor",
   "version": "0.0.0",
-  "description": "",
+  "description": "Earthquake Monitor Client",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve"
   },
-  "author": "",
+  "author": "Cristobal Avila D",
   "license": "MIT",
   "devDependencies": {
     "react": "*",

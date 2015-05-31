@@ -7,11 +7,19 @@ var EarthquakeItem = React.createClass({displayName: "EarthquakeItem",
 
     render: function() {
         return (
-            React.createElement("li", null, "Earthquake Item", 
-                React.createElement("span", null, this.props.dateTime), 
-                React.createElement("span", null, this.props.region), 
-                React.createElement("span", null, this.props.magnitude), 
-                React.createElement("span", null, this.props.depth)
+            React.createElement("div", {className: "row"}, 
+                React.createElement("div", {className: "col col-md-3"}, 
+                    React.createElement("span", null, this.props.dateTime)
+                ), 
+                React.createElement("div", {className: "col col-md-3"}, 
+                    React.createElement("span", null, this.props.region)
+                ), 
+                React.createElement("div", {className: "col col-md-3"}, 
+                    React.createElement("span", null, this.props.magnitude)
+                ), 
+                React.createElement("div", {className: "col col-md-3"}, 
+                    React.createElement("span", null, this.props.depth)
+                )
             )
         );
     }
@@ -35,7 +43,21 @@ var EarthquakeList = React.createClass({displayName: "EarthquakeList",
         //{key: '1', dateTime: '1', region: "America", magnitude: "2", depth: "5"}
 
         return (
-            React.createElement("ul", null, 
+            React.createElement("div", {className: "eartquake-list container"}, 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col col-md-3"}, 
+                        React.createElement("span", null, "Date/Time")
+                    ), 
+                    React.createElement("div", {className: "col col-md-3"}, 
+                        React.createElement("span", null, "Region")
+                    ), 
+                    React.createElement("div", {className: "col col-md-3"}, 
+                        React.createElement("span", null, "Magnitude")
+                    ), 
+                    React.createElement("div", {className: "col col-md-3"}, 
+                        React.createElement("span", null, "Depth")
+                    )
+                ), 
                 earthquakeItems
             )
         );

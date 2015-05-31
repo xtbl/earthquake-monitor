@@ -6,12 +6,20 @@ var EarthquakeItem = React.createClass({
 
     render: function() {
         return (
-            <li>Earthquake Item
-                <span>{this.props.dateTime}</span>
-                <span>{this.props.region}</span>
-                <span>{this.props.magnitude}</span>
-                <span>{this.props.depth}</span>
-            </li>
+            <div className="row">
+                <div className="col col-md-3">
+                    <span>{this.props.dateTime}</span>
+                </div>
+                <div className="col col-md-3">
+                    <span>{this.props.region}</span>
+                </div>
+                <div className="col col-md-3">
+                    <span>{this.props.magnitude}</span>
+                </div>
+                <div className="col col-md-3">
+                    <span>{this.props.depth}</span>
+                </div>
+            </div>
         );
     }
 });

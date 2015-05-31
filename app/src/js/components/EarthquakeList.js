@@ -12,9 +12,23 @@ var EarthquakeList = React.createClass({
         //{key: '1', dateTime: '1', region: "America", magnitude: "2", depth: "5"}
 
         return (
-            <ul>
+            <div className="eartquake-list container">
+                <div className="row">
+                    <div className="col col-md-3">
+                        <span>Date/Time</span>
+                    </div>
+                    <div className="col col-md-3">
+                        <span>Region</span>
+                    </div>
+                    <div className="col col-md-3">
+                        <span>Magnitude</span>
+                    </div>
+                    <div className="col col-md-3">
+                        <span>Depth</span>
+                    </div>
+                </div>
                 {earthquakeItems}
-            </ul>
+            </div>
         );
     }
 });
