@@ -47,7 +47,8 @@ gulp.task('html', function () {
 gulp.task('sass', function () {
     gulp.src('./app/src/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./app/dist'));
+        .pipe(gulp.dest('./app/dist'))
+        .pipe(connect.reload());
 });
 
 // watch files for live reload

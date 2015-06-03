@@ -13,18 +13,18 @@ var EarthquakeList = React.createClass({
 
         return (
             <div className="eartquake-list container">
-                <div className="row">
-                    <div className="col col-md-3">
-                        <span>Date/Time</span>
+                <div className="row ">
+                    <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Date/Time</h4>
                     </div>
-                    <div className="col col-md-3">
-                        <span>Region</span>
+                    <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Region</h4>
                     </div>
-                    <div className="col col-md-3">
-                        <span>Magnitude</span>
+                    <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Magnitude</h4>
                     </div>
-                    <div className="col col-md-3">
-                        <span>Depth</span>
+                    <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Depth</h4>
                     </div>
                 </div>
                 {earthquakeItems}
