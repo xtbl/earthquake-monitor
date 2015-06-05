@@ -209,7 +209,7 @@ var Magnitude = React.createClass({displayName: "Magnitude",
         var colorCode = {
           light: '#ccc'
         };
-        var magnitudeClass = 'magnitude';
+        var magnitudeClass = 'magnitude glowing';
 
         return (
             React.createElement("div", {className: magnitudeClass}, 
