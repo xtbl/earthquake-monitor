@@ -33,19 +33,7 @@ var Feed = React.createClass({
     return (
       <div>
 
-        <div className="container">
-          <ShowAddButton />
-        </div>
-
-        <FeedForm />
-
-        <br />
-        <br />
-
-        <FeedList items={this.state.items} />
-
         <EarthquakeList earthQuakeItems={this.state.earthQuakeItems} />
-
 
       </div>
     );

@@ -10,13 +10,15 @@
   "author": "Cristobal Avila D",
   "license": "MIT",
   "devDependencies": {
-    "react": "*",
-    "gulp-react": "*",
+    "classnames": "^2.1.2",
     "gulp": "*",
-    "gulp-connect": "*",
-    "gulp-concat": "*",
-    "gulp-open": "*",
     "gulp-browserify": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-open": "*",
+    "gulp-react": "*",
+    "gulp-sass": "^2.0.1",
+    "react": "*",
     "reactify": "*"
   }
 }
