@@ -1,16 +1,20 @@
 /** @jsx React.DOM */
 
-var React = require('react');
+var React = require('react'),
+    ClassNames = require('classnames');
 
 var Magnitude = React.createClass({
     render: function () {
+        var classes = ClassNames({
+           'magnitude': true,
+            'glowing': true
+        });
         var colorCode = {
           light: '#ccc'
         };
-        var magnitudeClass = 'magnitude glowing';
 
         return (
-            <div className={magnitudeClass}>
+            <div className={classes}>
                 <div>
                     {this.props.magnitude}
                 </div>
