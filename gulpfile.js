@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     open = require("gulp-open"),
     browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
     port = process.env.port || 3031;
 
 // browserify and transform JSX
@@ -42,12 +43,23 @@ gulp.task('html', function () {
     .pipe(connect.reload());
 });
 
+// compile sass files
+gulp.task('sass', function () {
+    gulp.src('./app/src/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./app/dist'))
+        .pipe(connect.reload());
+});
+
 // watch files for live reload
 gulp.task('watch', function() {
     gulp.watch('app/dist/js/*.js', ['js']);
     gulp.watch('app/index.html', ['html']);
     gulp.watch('app/src/js/**/*.js', ['browserify']);
+    gulp.watch('app/src/**/*.scss', ['sass']);
 });
+
+
 
 gulp.task('default', ['browserify']);
 

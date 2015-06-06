@@ -5,6 +5,8 @@ var ShowAddButton = require('./ShowAddButton');
 var FeedForm      = require('./FeedForm');
 var FeedList      = require('./FeedList');
 
+var EarthquakeList = require('./EarthquakeList');
+
 var Feed = React.createClass({
 
   getInitialState: function() {
@@ -13,8 +15,17 @@ var Feed = React.createClass({
       { key: '2', title: 'JavaScript is fun', description: 'Lexical scoping FTW', voteCount: 34},
       { key: '3', title: 'Coffee makes you awake', description: 'Drink responsibly', voteCount: 15},
     ];
+
+    var mockItems = [
+      {key: '1', dateTime: '1', region: "America", magnitude: "2", depth: "5"},
+      {key: '2', dateTime: '2', region: "Asia", magnitude: "4", depth: "1"},
+      {key: '3', dateTime: '3', region: "Australia", magnitude: "5", depth: "6"},
+    ];
+
+
     return {
-      items: FEED_ITEMS
+      items: FEED_ITEMS,
+      earthQuakeItems: mockItems
     }
   },
 
@@ -22,16 +33,7 @@ var Feed = React.createClass({
     return (
       <div>
 
-        <div className="container">
-          <ShowAddButton />
-        </div>
-
-        <FeedForm />
-
-        <br />
-        <br />
-
-        <FeedList items={this.state.items} />
+        <EarthquakeList earthQuakeItems={this.state.earthQuakeItems} />
 
       </div>
     );
