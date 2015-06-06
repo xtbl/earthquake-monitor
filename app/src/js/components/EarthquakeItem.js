@@ -1,4 +1,4 @@
-/** @ksx React.DOM */
+
 
 var React = require('react'),
     Magnitude = require('./Magnitude/Magnitude')
