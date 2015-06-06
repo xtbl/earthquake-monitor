@@ -33,8 +33,6 @@ var Feed = React.createClass({
     return (
       <div>
 
-        <FeedList items={this.state.items} />
-
         <EarthquakeList earthQuakeItems={this.state.earthQuakeItems} />
 
       </div>

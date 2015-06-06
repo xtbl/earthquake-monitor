@@ -104,8 +104,6 @@ var Feed = React.createClass({displayName: "Feed",
     return (
       React.createElement("div", null, 
 
-        React.createElement(FeedList, {items: this.state.items}), 
-
         React.createElement(EarthquakeList, {earthQuakeItems: this.state.earthQuakeItems})
 
       )
