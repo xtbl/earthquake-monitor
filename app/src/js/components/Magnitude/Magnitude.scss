@@ -1,42 +1,40 @@
+
+$magnitudeTypes: (
+  micro: green,
+  minor: green,
+  light: yellow,
+  moderate: orange,
+  strong: orange,
+  major: red,
+  great: red
+);
+
+@mixin glowing($magnitudeColor) {
+  border: solid 5px $magnitudeColor;
+  -webkit-animation: #{$magnitudeColor} 3s ease-in-out infinite alternate;
+  -moz-animation: #{$magnitudeColor} 3s ease-in-out infinite alternate;
+  animation: #{$magnitudeColor} 3s ease-in-out infinite alternate;
+
+  @keyframes #{$magnitudeColor} {
+    0% {background: #{$magnitudeColor}; border: #FFF;}
+    50% {background: #FFF; border: #{$magnitudeColor};}
+    100% {background: #{$magnitudeColor}; border: #FFF;}
+  }
+}
+
 .magnitude {
-  > div {
-    width: 25px;
-    height: 25px;
-    border: solid 3px red;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-  }
-}
+  $magSize: 25px;
 
-.glowing {
-  > div {
-  -webkit-animation: redglow 1.5s ease-in-out infinite alternate;
-  -moz-animation: redglow 1.5s ease-in-out infinite alternate;
-  animation: redglow 1.5s ease-in-out infinite alternate;
-  }
-}
+  width: $magSize;
+  height: $magSize;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 
-@keyframes redglow {
-  from {
-    box-shadow: inset 0 0 10px #fff,
-    inset 0 0 20px  #fff,
-    inset 0 0 30px  #fff,
-    inset 0 0 40px  red,
-    inset 0 0 50px  red,
-    inset 0 0 60px  red,
-    inset 0 0 70px red,
-    inset 0 0 80px red;
-  }
-  to {
-    box-shadow: inset 0 0 5px #fff,
-    inset 0 0 10px #fff,
-    inset 0 0 15px #fff,
-    inset 0 0 20px red,
-    inset 0 0 35px red,
-    inset 0 0 40px red,
-    inset 0 0 50px red,
-    inset 0 0 55px red;
+  @each $name, $magnitudeType in $magnitudeTypes {
+    &.#{$name} {
+      @include glowing($magnitudeType);
+    }
   }
 }
