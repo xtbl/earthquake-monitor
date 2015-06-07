@@ -4,13 +4,16 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
+    babel = require('gulp-babel'),
     port = process.env.port || 3031;
 
 // browserify and transform JSX
 gulp.task('browserify', function() {
     gulp.src('./app/src/js/main.js')
-      .pipe(browserify({transform: 'reactify'}))
-      .pipe(gulp.dest('./app/dist/js'));
+        .pipe(browserify({transform: 'reactify'}))
+        //TODO: add babel and sourcemaps
+        //.pipe(babel({compact:false}))
+        .pipe(gulp.dest('./app/dist/js'));
 });
 
 // launch browser in a port

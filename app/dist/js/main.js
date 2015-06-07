@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/** @ksx React.DOM */
+
 
 var React = require('react'),
     Magnitude = require('./Magnitude/Magnitude')
@@ -30,7 +30,7 @@ var EarthquakeItem = React.createClass({displayName: "EarthquakeItem",
 module.exports = EarthquakeItem;
 
 },{"./Magnitude/Magnitude":7,"react":166}],2:[function(require,module,exports){
-/** @jsx React.DOM */
+
 
 var React = require('react'),
     EarthquakeItem = require('./EarthquakeItem');
@@ -69,7 +69,7 @@ var EarthquakeList = React.createClass({displayName: "EarthquakeList",
 module.exports = EarthquakeList;
 
 },{"./EarthquakeItem":1,"react":166}],3:[function(require,module,exports){
-/** @jsx React.DOM */
+
 
 var React         = require('react');
 var ShowAddButton = require('./ShowAddButton');
@@ -116,7 +116,7 @@ module.exports = Feed;
 
 
 },{"./EarthquakeList":2,"./FeedForm":4,"./FeedList":6,"./ShowAddButton":8,"react":166}],4:[function(require,module,exports){
-/** @jsx React.DOM */
+
 
 var React = require('react');
 
@@ -140,7 +140,6 @@ module.exports = FeedForm;
 
 
 },{"react":166}],5:[function(require,module,exports){
-/** @jsx React.DOM */
 
 var React = require('react');
 
@@ -166,7 +165,7 @@ module.exports = FeedItem;
 
 
 },{"react":166}],6:[function(require,module,exports){
-/** @jsx React.DOM */
+
 
 var React = require('react'),
     FeedItem = require('./FeedItem');
@@ -198,21 +197,42 @@ module.exports = FeedList;
 
 
 },{"./EarthquakeItem":1,"./FeedItem":5,"react":166}],7:[function(require,module,exports){
-/** @jsx React.DOM */
+
 
 var React = require('react'),
     ClassNames = require('classnames');
 
 var Magnitude = React.createClass({displayName: "Magnitude",
     render: function () {
-        var classes = ClassNames({
-           'magnitude': true,
-            'glowing': true
-        });
-        var colorCode = {
-          light: '#ccc'
-        };
+        //var classes = ClassNames({
+        //   'magnitude': true,
+        //    'glowing': true
+        //});
 
+        /**
+         * Returns set of classes according to the magnitude
+         * provided
+         * @param {Int} magn
+         */
+        function getMagnitudeClasses(magn) {
+            var magnitudeTypes = {
+                "8": 'great',
+                "7": 'major',
+                "6": 'strong',
+                "5": 'moderate',
+                "4": 'light',
+                "3": 'minor',
+                "2": 'micro'
+            };
+            var magnitudeFloor = Math.floor(magn).toString();
+            if(magnitudeTypes[magnitudeFloor]) {
+                return magnitudeTypes[magnitudeFloor];
+            } else {
+                return "";
+            }
+        }
+
+        var classes = 'magnitude ' + getMagnitudeClasses(this.props.magnitude);
         return (
             React.createElement("div", {className: classes}, 
                 React.createElement("div", null, 
@@ -227,7 +247,6 @@ var Magnitude = React.createClass({displayName: "Magnitude",
 module.exports = Magnitude;
 
 },{"classnames":10,"react":166}],8:[function(require,module,exports){
-/** @jsx React.DOM */
 
 var React = require('react');
 
@@ -245,7 +264,7 @@ module.exports = ShowAddButton;
 
 
 },{"react":166}],9:[function(require,module,exports){
-/** @jsx React.DOM */
+
 var React = require('react'),
     Feed = require('./components/Feed');
 

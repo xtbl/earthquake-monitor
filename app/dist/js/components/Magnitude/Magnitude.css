@@ -1,17 +1,119 @@
-.magnitude > div {
-  width: 20px;
-  height: 20px;
-  background-color: orangered;
+.magnitude {
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  text-align: center; }
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold; }
+  .magnitude.micro {
+    border: solid 5px green;
+    -webkit-animation: green 3s ease-in-out infinite alternate;
+    -moz-animation: green 3s ease-in-out infinite alternate;
+    animation: green 3s ease-in-out infinite alternate; }
 
-.glowing {
-  -webkit-animation: redglow 1.5s ease-in-out infinite alternate;
-  -moz-animation: redglow 1.5s ease-in-out infinite alternate;
-  animation: redglow 1.5s ease-in-out infinite alternate; }
+@keyframes green {
+  0% {
+    background: green;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: green; }
+  100% {
+    background: green;
+    border: #FFF; } }
+  .magnitude.minor {
+    border: solid 5px green;
+    -webkit-animation: green 3s ease-in-out infinite alternate;
+    -moz-animation: green 3s ease-in-out infinite alternate;
+    animation: green 3s ease-in-out infinite alternate; }
 
-@keyframes redglow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177; }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177; } }
+@keyframes green {
+  0% {
+    background: green;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: green; }
+  100% {
+    background: green;
+    border: #FFF; } }
+  .magnitude.light {
+    border: solid 5px yellow;
+    -webkit-animation: yellow 3s ease-in-out infinite alternate;
+    -moz-animation: yellow 3s ease-in-out infinite alternate;
+    animation: yellow 3s ease-in-out infinite alternate; }
+
+@keyframes yellow {
+  0% {
+    background: yellow;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: yellow; }
+  100% {
+    background: yellow;
+    border: #FFF; } }
+  .magnitude.moderate {
+    border: solid 5px orange;
+    -webkit-animation: orange 3s ease-in-out infinite alternate;
+    -moz-animation: orange 3s ease-in-out infinite alternate;
+    animation: orange 3s ease-in-out infinite alternate; }
+
+@keyframes orange {
+  0% {
+    background: orange;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: orange; }
+  100% {
+    background: orange;
+    border: #FFF; } }
+  .magnitude.strong {
+    border: solid 5px orange;
+    -webkit-animation: orange 3s ease-in-out infinite alternate;
+    -moz-animation: orange 3s ease-in-out infinite alternate;
+    animation: orange 3s ease-in-out infinite alternate; }
+
+@keyframes orange {
+  0% {
+    background: orange;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: orange; }
+  100% {
+    background: orange;
+    border: #FFF; } }
+  .magnitude.major {
+    border: solid 5px red;
+    -webkit-animation: red 3s ease-in-out infinite alternate;
+    -moz-animation: red 3s ease-in-out infinite alternate;
+    animation: red 3s ease-in-out infinite alternate; }
+
+@keyframes red {
+  0% {
+    background: red;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: red; }
+  100% {
+    background: red;
+    border: #FFF; } }
+  .magnitude.great {
+    border: solid 5px red;
+    -webkit-animation: red 3s ease-in-out infinite alternate;
+    -moz-animation: red 3s ease-in-out infinite alternate;
+    animation: red 3s ease-in-out infinite alternate; }
+
+@keyframes red {
+  0% {
+    background: red;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: red; }
+  100% {
+    background: red;
+    border: #FFF; } }
