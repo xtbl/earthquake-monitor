@@ -13,10 +13,6 @@ var Magnitude = React.createClass({
           light: '#ccc'
         };
 
-        //ES6 test
-        var sum = a => (a + 10);
-        console.log(sum(5));
-
         return (
             <div className={classes}>
                 <div>

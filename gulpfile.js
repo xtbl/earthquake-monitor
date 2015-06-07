@@ -11,7 +11,8 @@ var gulp = require('gulp'),
 gulp.task('browserify', function() {
     gulp.src('./app/src/js/main.js')
         .pipe(browserify({transform: 'reactify'}))
-        .pipe(babel())
+        //TODO: add babel and sourcemaps
+        //.pipe(babel({compact:false}))
         .pipe(gulp.dest('./app/dist/js'));
 });
 
