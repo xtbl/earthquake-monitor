@@ -7,7 +7,9 @@ var EarthquakeList = React.createClass({
     render: function() {
 
         var earthquakeItems = this.props.earthQuakeItems.map(function(item){
-            return <EarthquakeItem dateTime={item.dateTime} region={item.region} magnitude={item.magnitude} depth={item.depth} />
+            if(item.properties.mag >= 0){
+                return <EarthquakeItem dateTime={item.properties.time} region={item.properties.place} magnitude={item.properties.mag} depth={item.properties.code} />
+            }
         });
         //{key: '1', dateTime: '1', region: "America", magnitude: "2", depth: "5"}
 

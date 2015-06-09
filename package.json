@@ -20,6 +20,7 @@
     "gulp-react": "*",
     "gulp-sass": "^2.0.1",
     "react": "*",
-    "reactify": "*"
+    "reactify": "*",
+    "restful.js": "^0.6.1"
   }
 }

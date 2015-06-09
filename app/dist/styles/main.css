@@ -5,53 +5,87 @@
   text-align: center;
   font-size: 14px;
   font-weight: bold; }
-  .magnitude.micro {
-    border: solid 5px green;
-    -webkit-animation: green 3s ease-in-out infinite alternate;
-    -moz-animation: green 3s ease-in-out infinite alternate;
-    animation: green 3s ease-in-out infinite alternate; }
+  .magnitude span {
+    padding-left: 25px; }
+  .magnitude.micro-minimal {
+    border: solid 5px dodgerblue;
+    -webkit-animation: dodgerblue 3s ease-in-out infinite alternate;
+    -moz-animation: dodgerblue 3s ease-in-out infinite alternate;
+    animation: dodgerblue 3s ease-in-out infinite alternate; }
 
-@keyframes green {
+@keyframes dodgerblue {
   0% {
-    background: green;
+    background: dodgerblue;
     border: #FFF; }
   50% {
     background: #FFF;
-    border: green; }
+    border: dodgerblue; }
   100% {
-    background: green;
+    background: dodgerblue;
+    border: #FFF; } }
+  .magnitude.micro {
+    border: solid 5px darkturquoise;
+    -webkit-animation: darkturquoise 3s ease-in-out infinite alternate;
+    -moz-animation: darkturquoise 3s ease-in-out infinite alternate;
+    animation: darkturquoise 3s ease-in-out infinite alternate; }
+
+@keyframes darkturquoise {
+  0% {
+    background: darkturquoise;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: darkturquoise; }
+  100% {
+    background: darkturquoise;
+    border: #FFF; } }
+  .magnitude.micro-minor {
+    border: solid 5px olivedrab;
+    -webkit-animation: olivedrab 3s ease-in-out infinite alternate;
+    -moz-animation: olivedrab 3s ease-in-out infinite alternate;
+    animation: olivedrab 3s ease-in-out infinite alternate; }
+
+@keyframes olivedrab {
+  0% {
+    background: olivedrab;
+    border: #FFF; }
+  50% {
+    background: #FFF;
+    border: olivedrab; }
+  100% {
+    background: olivedrab;
     border: #FFF; } }
   .magnitude.minor {
-    border: solid 5px green;
-    -webkit-animation: green 3s ease-in-out infinite alternate;
-    -moz-animation: green 3s ease-in-out infinite alternate;
-    animation: green 3s ease-in-out infinite alternate; }
+    border: solid 5px yellowgreen;
+    -webkit-animation: yellowgreen 3s ease-in-out infinite alternate;
+    -moz-animation: yellowgreen 3s ease-in-out infinite alternate;
+    animation: yellowgreen 3s ease-in-out infinite alternate; }
 
-@keyframes green {
+@keyframes yellowgreen {
   0% {
-    background: green;
+    background: yellowgreen;
     border: #FFF; }
   50% {
     background: #FFF;
-    border: green; }
+    border: yellowgreen; }
   100% {
-    background: green;
+    background: yellowgreen;
     border: #FFF; } }
   .magnitude.light {
-    border: solid 5px yellow;
-    -webkit-animation: yellow 3s ease-in-out infinite alternate;
-    -moz-animation: yellow 3s ease-in-out infinite alternate;
-    animation: yellow 3s ease-in-out infinite alternate; }
+    border: solid 5px gold;
+    -webkit-animation: gold 3s ease-in-out infinite alternate;
+    -moz-animation: gold 3s ease-in-out infinite alternate;
+    animation: gold 3s ease-in-out infinite alternate; }
 
-@keyframes yellow {
+@keyframes gold {
   0% {
-    background: yellow;
+    background: gold;
     border: #FFF; }
   50% {
     background: #FFF;
-    border: yellow; }
+    border: gold; }
   100% {
-    background: yellow;
+    background: gold;
     border: #FFF; } }
   .magnitude.moderate {
     border: solid 5px orange;
@@ -70,20 +104,20 @@
     background: orange;
     border: #FFF; } }
   .magnitude.strong {
-    border: solid 5px orange;
-    -webkit-animation: orange 3s ease-in-out infinite alternate;
-    -moz-animation: orange 3s ease-in-out infinite alternate;
-    animation: orange 3s ease-in-out infinite alternate; }
+    border: solid 5px tomato;
+    -webkit-animation: tomato 3s ease-in-out infinite alternate;
+    -moz-animation: tomato 3s ease-in-out infinite alternate;
+    animation: tomato 3s ease-in-out infinite alternate; }
 
-@keyframes orange {
+@keyframes tomato {
   0% {
-    background: orange;
+    background: tomato;
     border: #FFF; }
   50% {
     background: #FFF;
-    border: orange; }
+    border: tomato; }
   100% {
-    background: orange;
+    background: tomato;
     border: #FFF; } }
   .magnitude.major {
     border: solid 5px red;

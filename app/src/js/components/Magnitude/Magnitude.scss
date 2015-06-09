@@ -1,10 +1,12 @@
 
 $magnitudeTypes: (
-  micro: green,
-  minor: green,
-  light: yellow,
+  micro-minimal: dodgerblue,
+  micro: darkturquoise,
+  micro-minor: olivedrab,
+  minor: yellowgreen,
+  light: gold,
   moderate: orange,
-  strong: orange,
+  strong: tomato,
   major: red,
   great: red
 );
@@ -31,6 +33,10 @@ $magnitudeTypes: (
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+
+  span {
+    padding-left: 25px;
+  }
 
   @each $name, $magnitudeType in $magnitudeTypes {
     &.#{$name} {
