@@ -9,34 +9,16 @@ var Feed = React.createClass({
   loadEarthquakesFromServer: function () {
     var self = this;
 
-    var api = restful('earthquake.usgs.gov');
-
     //TODO: move this to own service, fix dates, depth and finish prototype
 
-    api.oneUrl('earthquakes', "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2015-06-06T19:16:31.552Z&endtime=")
-    //Earthquakes.getEarthquakes()
-                .get()
-                .then(function(earthQuakesResponse){
-                  //console.log(earthQuakeItems.body());
-                  //console.log(earthQuakeItems.data);
-                  var items = earthQuakesResponse.body();
-                  console.log(items.data());
-                  debugger;
-                  self.setState({
-                    earthQuakeItems: items.data().features
-                  });
-                });
-
-    //return earthquakesCollection.getAll;
-
-
-    //Earthquakes.getEarthquakes().then(function(earthQuakeItems){
-    //  self.setState({
-    //    earthQuakeItems: earthQuakeItems
-    //  });
-    //});
-
-
+    Earthquakes.getEarthquakes()
+      .get()
+      .then(function(earthQuakesResponse){
+        var items = earthQuakesResponse.body();
+        self.setState({
+          earthQuakeItems: items.data().features
+        });
+      });
   },
 
   getInitialState: function() {

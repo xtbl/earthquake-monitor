@@ -1,11 +1,11 @@
 var mockData = require('../mockData');
-var restful = require('restful.js');
+var restful = require('../restfuljs/restful');
 
 var Earthquakes = (function() {
 
     function getEarthquakes() {
         var api = restful('earthquake.usgs.gov');
-        return api.oneUrl('earthquakes', "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2015-06-06T19:16:31.552Z&endtime=").get;
+        return api.oneUrl('earthquakes', "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2015-06-06T19:16:31.552Z&endtime=");
     }
 
     function getMockEarthquakes() {
