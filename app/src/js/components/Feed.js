@@ -9,29 +9,27 @@ var Feed = React.createClass({
   loadEarthquakesFromServer: function () {
     var self = this;
 
-    //TODO: move this to own service, fix dates, depth and finish prototype
+    //TODO: depth and finish prototype
 
-    Earthquakes.getEarthquakes()
-      .get()
-      .then(function(earthQuakesResponse){
-        var items = earthQuakesResponse.body();
-        self.setState({
-          earthQuakeItems: items.data().features
-        });
-      });
+    //Earthquakes.getEarthquakes()
+    //  .get()
+    //  .then(function(earthQuakesResponse){
+    //    var items = earthQuakesResponse.body();
+    //    self.setState({
+    //      earthQuakeItems: items.data().features
+    //    });
+    //  });
+    // mock data
+    var mockItems = Earthquakes.getMockEarthquakes();
+    self.setState({
+      earthQuakeItems: mockItems
+    });
+
   },
 
   getInitialState: function() {
-    var mockItems = Earthquakes.getMockEarthquakes();
-
-    console.log(Earthquakes.getMockEarthquakes());
-
-    http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2015-06-06T19:16:31.552Z&endtime=
-
     return {
-      //earthQuakeItems: mockItems
       earthQuakeItems: []
-
     }
   },
 
