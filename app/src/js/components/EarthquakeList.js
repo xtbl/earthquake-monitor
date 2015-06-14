@@ -22,7 +22,7 @@ var EarthquakeList = React.createClass({
                     <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
                         <h4>Region</h4>
                     </div>
-                    <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3 shake shake-little shake-constant">
                         <h4>Magnitude</h4>
                     </div>
                     <div className="col col-xs-3 col-sm-3 col-md-3 col-lg-3">

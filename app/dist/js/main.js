@@ -59,7 +59,7 @@ var EarthquakeList = React.createClass({displayName: "EarthquakeList",
                     React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
                         React.createElement("h4", null, "Region")
                     ), 
-                    React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
+                    React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3 shake shake-little shake-constant"}, 
                         React.createElement("h4", null, "Magnitude")
                     ), 
                     React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
@@ -154,7 +154,7 @@ var Feed = React.createClass({displayName: "Feed",
 
   render: function() {
     return (
-      React.createElement("div", null, 
+      React.createElement("div", {className: "feed"}, 
         React.createElement("button", {onClick: this.handleClick}, "Change State"), 
         React.createElement(EarthquakeList, {earthQuakeItems: this.state.earthQuakeItems})
       )

@@ -49,7 +49,7 @@ var Feed = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="feed">
         <button onClick={this.handleClick}>Change State</button>
         <EarthquakeList earthQuakeItems={this.state.earthQuakeItems} />
       </div>
