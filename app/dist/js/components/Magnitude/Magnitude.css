@@ -5,56 +5,90 @@
   text-align: center;
   font-size: 14px;
   font-weight: bold; }
+  .magnitude span {
+    padding-left: 25px; }
+  .magnitude.micro-minimal {
+    border: solid 2px dodgerblue;
+    -webkit-animation: dodgerblue 3s ease-in-out infinite alternate;
+    -moz-animation: dodgerblue 3s ease-in-out infinite alternate;
+    animation: dodgerblue 3s ease-in-out infinite alternate; }
+
+@keyframes dodgerblue {
+  0% {
+    background: dodgerblue;
+    border: #220901; }
+  50% {
+    background: #220901;
+    border: dodgerblue; }
+  100% {
+    background: dodgerblue;
+    border: #220901; } }
   .magnitude.micro {
-    border: solid 5px green;
-    -webkit-animation: green 3s ease-in-out infinite alternate;
-    -moz-animation: green 3s ease-in-out infinite alternate;
-    animation: green 3s ease-in-out infinite alternate; }
+    border: solid 2px darkturquoise;
+    -webkit-animation: darkturquoise 3s ease-in-out infinite alternate;
+    -moz-animation: darkturquoise 3s ease-in-out infinite alternate;
+    animation: darkturquoise 3s ease-in-out infinite alternate; }
 
-@keyframes green {
+@keyframes darkturquoise {
   0% {
-    background: green;
-    border: #FFF; }
+    background: darkturquoise;
+    border: #220901; }
   50% {
-    background: #FFF;
-    border: green; }
+    background: #220901;
+    border: darkturquoise; }
   100% {
-    background: green;
-    border: #FFF; } }
+    background: darkturquoise;
+    border: #220901; } }
+  .magnitude.micro-minor {
+    border: solid 2px olivedrab;
+    -webkit-animation: olivedrab 3s ease-in-out infinite alternate;
+    -moz-animation: olivedrab 3s ease-in-out infinite alternate;
+    animation: olivedrab 3s ease-in-out infinite alternate; }
+
+@keyframes olivedrab {
+  0% {
+    background: olivedrab;
+    border: #220901; }
+  50% {
+    background: #220901;
+    border: olivedrab; }
+  100% {
+    background: olivedrab;
+    border: #220901; } }
   .magnitude.minor {
-    border: solid 5px green;
-    -webkit-animation: green 3s ease-in-out infinite alternate;
-    -moz-animation: green 3s ease-in-out infinite alternate;
-    animation: green 3s ease-in-out infinite alternate; }
+    border: solid 2px yellowgreen;
+    -webkit-animation: yellowgreen 3s ease-in-out infinite alternate;
+    -moz-animation: yellowgreen 3s ease-in-out infinite alternate;
+    animation: yellowgreen 3s ease-in-out infinite alternate; }
 
-@keyframes green {
+@keyframes yellowgreen {
   0% {
-    background: green;
-    border: #FFF; }
+    background: yellowgreen;
+    border: #220901; }
   50% {
-    background: #FFF;
-    border: green; }
+    background: #220901;
+    border: yellowgreen; }
   100% {
-    background: green;
-    border: #FFF; } }
+    background: yellowgreen;
+    border: #220901; } }
   .magnitude.light {
-    border: solid 5px yellow;
-    -webkit-animation: yellow 3s ease-in-out infinite alternate;
-    -moz-animation: yellow 3s ease-in-out infinite alternate;
-    animation: yellow 3s ease-in-out infinite alternate; }
+    border: solid 2px gold;
+    -webkit-animation: gold 3s ease-in-out infinite alternate;
+    -moz-animation: gold 3s ease-in-out infinite alternate;
+    animation: gold 3s ease-in-out infinite alternate; }
 
-@keyframes yellow {
+@keyframes gold {
   0% {
-    background: yellow;
-    border: #FFF; }
+    background: gold;
+    border: #220901; }
   50% {
-    background: #FFF;
-    border: yellow; }
+    background: #220901;
+    border: gold; }
   100% {
-    background: yellow;
-    border: #FFF; } }
+    background: gold;
+    border: #220901; } }
   .magnitude.moderate {
-    border: solid 5px orange;
+    border: solid 2px orange;
     -webkit-animation: orange 3s ease-in-out infinite alternate;
     -moz-animation: orange 3s ease-in-out infinite alternate;
     animation: orange 3s ease-in-out infinite alternate; }
@@ -62,31 +96,31 @@
 @keyframes orange {
   0% {
     background: orange;
-    border: #FFF; }
+    border: #220901; }
   50% {
-    background: #FFF;
+    background: #220901;
     border: orange; }
   100% {
     background: orange;
-    border: #FFF; } }
+    border: #220901; } }
   .magnitude.strong {
-    border: solid 5px orange;
-    -webkit-animation: orange 3s ease-in-out infinite alternate;
-    -moz-animation: orange 3s ease-in-out infinite alternate;
-    animation: orange 3s ease-in-out infinite alternate; }
+    border: solid 2px tomato;
+    -webkit-animation: tomato 3s ease-in-out infinite alternate;
+    -moz-animation: tomato 3s ease-in-out infinite alternate;
+    animation: tomato 3s ease-in-out infinite alternate; }
 
-@keyframes orange {
+@keyframes tomato {
   0% {
-    background: orange;
-    border: #FFF; }
+    background: tomato;
+    border: #220901; }
   50% {
-    background: #FFF;
-    border: orange; }
+    background: #220901;
+    border: tomato; }
   100% {
-    background: orange;
-    border: #FFF; } }
+    background: tomato;
+    border: #220901; } }
   .magnitude.major {
-    border: solid 5px red;
+    border: solid 2px red;
     -webkit-animation: red 3s ease-in-out infinite alternate;
     -moz-animation: red 3s ease-in-out infinite alternate;
     animation: red 3s ease-in-out infinite alternate; }
@@ -94,15 +128,15 @@
 @keyframes red {
   0% {
     background: red;
-    border: #FFF; }
+    border: #220901; }
   50% {
-    background: #FFF;
+    background: #220901;
     border: red; }
   100% {
     background: red;
-    border: #FFF; } }
+    border: #220901; } }
   .magnitude.great {
-    border: solid 5px red;
+    border: solid 2px red;
     -webkit-animation: red 3s ease-in-out infinite alternate;
     -moz-animation: red 3s ease-in-out infinite alternate;
     animation: red 3s ease-in-out infinite alternate; }
@@ -110,10 +144,10 @@
 @keyframes red {
   0% {
     background: red;
-    border: #FFF; }
+    border: #220901; }
   50% {
-    background: #FFF;
+    background: #220901;
     border: red; }
   100% {
     background: red;
-    border: #FFF; } }
+    border: #220901; } }

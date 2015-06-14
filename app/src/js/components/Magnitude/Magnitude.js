@@ -5,10 +5,6 @@ var React = require('react'),
 
 var Magnitude = React.createClass({
     render: function () {
-        //var classes = ClassNames({
-        //   'magnitude': true,
-        //    'glowing': true
-        //});
 
         /**
          * Returns set of classes according to the magnitude
@@ -23,26 +19,25 @@ var Magnitude = React.createClass({
                 "5": 'moderate',
                 "4": 'light',
                 "3": 'minor',
-                "2": 'micro'
+                "2": 'micro-minor',
+                "1": 'micro',
+                "0": 'micro-minimal'
             };
             var magnitudeFloor = Math.floor(magn).toString();
-            if(magnitudeTypes[magnitudeFloor]) {
-                return magnitudeTypes[magnitudeFloor];
-            } else {
-                return "";
-            }
+
+            return (magnitudeTypes[magnitudeFloor]) ? magnitudeTypes[magnitudeFloor] : "";
         }
 
         var classes = 'magnitude ' + getMagnitudeClasses(this.props.magnitude);
         return (
             <div className={classes}>
                 <div>
-                    {this.props.magnitude}
+
                 </div>
+                <span>{this.props.magnitude}</span>
             </div>
         );
     }
 });
 
-//TODO: use classSet to manage classes https://facebook.github.io/react/docs/class-name-manipulation.html
 module.exports = Magnitude;

@@ -1,24 +1,28 @@
+@import "../../../styles/variables";
+
 
 $magnitudeTypes: (
-  micro: green,
-  minor: green,
-  light: yellow,
+  micro-minimal: dodgerblue,
+  micro: darkturquoise,
+  micro-minor: olivedrab,
+  minor: yellowgreen,
+  light: gold,
   moderate: orange,
-  strong: orange,
+  strong: tomato,
   major: red,
   great: red
 );
 
 @mixin glowing($magnitudeColor) {
-  border: solid 5px $magnitudeColor;
+  border: solid 2px $magnitudeColor;
   -webkit-animation: #{$magnitudeColor} 3s ease-in-out infinite alternate;
   -moz-animation: #{$magnitudeColor} 3s ease-in-out infinite alternate;
   animation: #{$magnitudeColor} 3s ease-in-out infinite alternate;
 
   @keyframes #{$magnitudeColor} {
-    0% {background: #{$magnitudeColor}; border: #FFF;}
-    50% {background: #FFF; border: #{$magnitudeColor};}
-    100% {background: #{$magnitudeColor}; border: #FFF;}
+    0% {background: #{$magnitudeColor}; border: $kilamanjaro;}
+    50% {background: $kilamanjaro; border: #{$magnitudeColor};}
+    100% {background: #{$magnitudeColor}; border: $kilamanjaro;}
   }
 }
 
@@ -31,6 +35,10 @@ $magnitudeTypes: (
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+
+  span {
+    padding-left: 25px;
+  }
 
   @each $name, $magnitudeType in $magnitudeTypes {
     &.#{$name} {

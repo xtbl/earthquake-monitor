@@ -1,5 +1,26 @@
+@import "./overwrites";
+@import "../vendor/csshake.scss";
 @import "../js/components/Magnitude/Magnitude.scss";
 
-body {
-  color: black;
+.main-header {
+  background-color: $mahogany;
+  &.jumbotron {
+    margin-bottom: 0;
+    .shake {
+      border: solid 5px $buttercup;
+      padding: 2px 16px;
+    }
+  }
+}
+
+.feed {
+  background-color: $kilamanjaro;
+  width: 80%;
+  margin: auto;
+}
+
+.eartquake-list {
+  span {
+    font-size: 0.9em;
+  }
 }
