@@ -1,2 +1,8 @@
-# react-gulp-browserify-base-project
-React Gulp Browserify Base Project
+# Earthquake Monitor
+Earthquake Monitor. React, Browserify, Sass, Gulp.
+
+
+TODO:
+- ES6
+- add actions
+
