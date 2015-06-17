@@ -36,21 +36,15 @@ var Feed = React.createClass({
   componentDidMount: function() {
     this.loadEarthquakesFromServer();
   },
-  componentDidUpdate: function () {
-    console.log("component updated");
-  },
   handleClick: function () {
-    console.log("handleClick");
     var mockItems = Earthquakes.getMockEarthquakes();
     this.setState({
       earthQuakeItems: mockItems
     });
   },
-
   render: function() {
     return (
       <div className="feed">
-        <button onClick={this.handleClick}>Change State</button>
         <EarthquakeList earthQuakeItems={this.state.earthQuakeItems} />
       </div>
     );
