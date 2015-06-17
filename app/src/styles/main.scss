@@ -19,8 +19,25 @@
   margin: auto;
 }
 
-.eartquake-list {
+.eartquake-list-inner {
+  transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  &.showUp {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  &.hide-list {
+    opacity: 0;
+  }
   span {
     font-size: 0.9em;
+  }
+}
+
+.eartquake-list-controls {
+  .btn {
+    margin-top: 30px;
+    background-color: $buttercup;
+    color: $mahogany;
+
   }
 }

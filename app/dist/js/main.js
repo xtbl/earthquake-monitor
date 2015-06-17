@@ -38,44 +38,72 @@ module.exports = EarthquakeItem;
 
 
 var React = require('react'),
+    ClassNames = require('classnames'),
     EarthquakeItem = require('./EarthquakeItem');
 
 var EarthquakeList = React.createClass({displayName: "EarthquakeList",
     render: function() {
-
+        var self = this;
         var earthquakeItems = this.props.earthQuakeItems.map(function(item){
             if(item.properties.mag >= 0){
                 return React.createElement(EarthquakeItem, {dateTime: item.properties.time, region: item.properties.place, magnitude: item.properties.mag, depth: item.properties.code})
             }
         });
+        var eqContainerClasses = ClassNames({
+            "eartquake-list-inner": true,
+            "showUp": this.state.showQuakes,
+            "hide-list": !this.state.showQuakes
+        });
+        var eqControlsClasses = ClassNames({
+            "eartquake-list-controls": true,
+            "hide": this.state.showQuakes
+        });
         //{key: '1', dateTime: '1', region: "America", magnitude: "2", depth: "5"}
 
         return (
-            React.createElement("div", {className: "eartquake-list container"}, 
-                React.createElement("div", {className: "row "}, 
-                    React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
-                        React.createElement("h4", null, "Date/Time")
-                    ), 
-                    React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
-                        React.createElement("h4", null, "Region")
-                    ), 
-                    React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3 shake shake-little shake-constant"}, 
-                        React.createElement("h4", null, "Magnitude")
-                    ), 
-                    React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
-                        React.createElement("h4", null, "Depth")
-                    )
+            React.createElement("div", {className: "eartquake-list"}, 
+                React.createElement("div", {className: eqControlsClasses}, 
+                    React.createElement("button", {className: "btn btn-lg btn-block", onClick: this.handleClick}, "Show Recent Activity")
                 ), 
-                earthquakeItems
+                React.createElement("div", {className: eqContainerClasses}, 
+                    React.createElement("div", {className: "row "}, 
+                        React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
+                            React.createElement("h4", null, "Date/Time")
+                        ), 
+                        React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
+                            React.createElement("h4", null, "Region")
+                        ), 
+                        React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3 shake shake-little shake-constant"}, 
+                            React.createElement("h4", null, "Magnitude")
+                        ), 
+                        React.createElement("div", {className: "col col-xs-3 col-sm-3 col-md-3 col-lg-3"}, 
+                            React.createElement("h4", null, "Depth")
+                        )
+                    ), 
+                    earthquakeItems
+                )
             )
         );
+    },
+    componentDidMount: function () {
+
+    },
+    getInitialState: function () {
+        return {
+            showQuakes: false
+        }
+    },
+    handleClick: function () {
+        this.setState({
+            showQuakes: true
+        });
     }
 });
 
 
 module.exports = EarthquakeList;
 
-},{"./EarthquakeItem":1,"react":166}],3:[function(require,module,exports){
+},{"./EarthquakeItem":1,"classnames":9,"react":166}],3:[function(require,module,exports){
 var mockData = require('../mockData');
 var restful = require('../restfuljs/restful');
 
@@ -141,21 +169,15 @@ var Feed = React.createClass({displayName: "Feed",
   componentDidMount: function() {
     this.loadEarthquakesFromServer();
   },
-  componentDidUpdate: function () {
-    console.log("component updated");
-  },
   handleClick: function () {
-    console.log("handleClick");
     var mockItems = Earthquakes.getMockEarthquakes();
     this.setState({
       earthQuakeItems: mockItems
     });
   },
-
   render: function() {
     return (
       React.createElement("div", {className: "feed"}, 
-        React.createElement("button", {onClick: this.handleClick}, "Change State"), 
         React.createElement(EarthquakeList, {earthQuakeItems: this.state.earthQuakeItems})
       )
     );
